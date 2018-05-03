@@ -1,14 +1,21 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Europe Country Information
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+  --- Countries in Europe ---
+
+  <div text-left>
+  <ion-img width="200" height="130" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/640px-Flag_of_Europe.svg.png"></ion-img>
+  </div>
+  <ul>
+  <li (click)="openWesternEurope()"> Click -> Western Europe</li>
+  <li (click)="openNorthernEurope()"> Click -> Northern Europe</li>
+  <li (click)="openSouthernEurope()"> Click -> Southern Europe</li>
+  <li (click)="openEasternEurope()"> Click -> Eastern Europe</li>
+  </ul>
+  </ion-content>

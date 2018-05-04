@@ -17,5 +17,10 @@
    
   <ion-img width="200" height="180" src="https://previews.123rf.com/images/pavalena/pavalena1503/pavalena150300003/38526947-western-europe-vector-maps-of-territories.jpg"></ion-img>
   
-  <page-western-europe-countries></page-western-europe-countries>
+  <ion-list>
+      <ion-item *ngFor="let country of countries">
+        <b>{{country.name}}</b>
+      </ion-item>
+    </ion-list>
+    
 </ion-content>

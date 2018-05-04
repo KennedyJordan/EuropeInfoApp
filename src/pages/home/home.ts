@@ -3,7 +3,7 @@ import { NavController } from'ionic-angular';
 import { WesternEuropePage } from './../western-europe/western-europe';
 import { NorthernEuropePage } from './../northern-europe/northern-europe';
 import { SouthernEuropePage } from './../southern-europe/southern-europe';
-import {EasternEuropePage} from './../eastern-europe/eastern-europe';
+import { EasternEuropePage } from './../eastern-europe/eastern-europe';
 
 @Component({
   selector:'page-home',

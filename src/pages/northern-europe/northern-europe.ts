@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the NorthernEuropePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
+import { CountriesProvider } from '../../providers/countries/countries';
+ 
 @IonicPage()
 @Component({
   selector: 'page-northern-europe',
@@ -15,11 +9,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NorthernEuropePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  countries:any[];
+  constructor(public navCtrl: NavController, private cp:CountriesProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NorthernEuropePage');
+    this.cp.GetCountriesData().subscribe(data =>
+    {
+      this.countries = data.northerncountries;
+    })
   }
 
 }

@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -14,6 +15,7 @@ import { WesternEuropeCountriesPage } from '../pages/western-europe-countries/we
 import { NorthernEuropeCountriesPage } from '../pages/northern-europe-countries/northern-europe-countries';
 import { SouthernEuropeCountriesPage } from '../pages/southern-europe-countries/southern-europe-countries';
 import {EasternEuropeCountriesPage} from '../pages/eastern-europe-countries/eastern-europe-countries';
+import { CountriesProvider } from '../providers/countries/countries';
 
 @NgModule({
 declarations: [
@@ -30,7 +32,8 @@ EasternEuropeCountriesPage
 ],
 imports: [
 BrowserModule,
-IonicModule.forRoot(MyApp)
+IonicModule.forRoot(MyApp),
+HttpClientModule
 ],
 bootstrap: [IonicApp],
 entryComponents: [
@@ -48,7 +51,8 @@ EasternEuropeCountriesPage
 providers: [
 StatusBar,
 SplashScreen,
-{provide: ErrorHandler, useClass: IonicErrorHandler}
+{provide: ErrorHandler, useClass: IonicErrorHandler},
+    CountriesProvider
 ]
 })
 export class AppModule {}
